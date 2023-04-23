@@ -1,0 +1,258 @@
+body {
+    margin: auto;
+    text-align: center;
+    overflow: hidden;
+    background: black;
+
+}
+
+.main {
+    background: #ddd;
+}
+
+video {
+    width: 100%;
+    max-height: 100%;
+}
+
+.controls {
+    margin: auto;
+    width: 100%;
+    height: 100%;
+}
+
+.controls ul {
+    font: 20px sans-serif;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-around;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.controls ul li {
+    flex: 0 1 auto;
+    list-style-type: none;
+    height: 100%;
+    width: 100%;
+    background: #0403031f;
+    display: table;
+    text-align: center;
+    position: absolute;
+    width: 50%;
+    right: 0;
+    bottom: 0;
+    top: 0;
+}
+
+.controls ul li:first-child {
+    background: #ffffff45;
+    left: 0;
+}
+
+#progress {
+    background-color: #ff4949f7;
+    width: 0%;
+    height: 6px;
+    margin: auto;
+    border-radius: 0;
+    position: relative;
+    top: 0;
+    z-index: 999;
+}
+
+
+
+#choiceCaption,
+#interactionZones,
+#nextSegments,
+#nextSegment {
+    display: none;
+}
+
+/* comment to show links */
+.controls a {
+    color: #ffffffa6;
+    text-decoration: none;
+    text-shadow: 0px 0px 10px #000;
+    animation: choices 3s forwards;
+    font-size: 2em;
+    /* display: block; */
+    /* margin: 50%; */
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.controls a:hover {
+    color: white;
+}
+
+.controls a:active,
+.controls a:focus {
+    color: white;
+    text-decoration: underline solid white
+}
+
+@keyframes choices {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+video::cue {
+    font: 60% sans-serif;
+    color: white;
+    background: none;
+    text-shadow: 0px 0px 10px #000;
+}
+
+#c {
+    margin: auto;
+    height: 100%;
+    width: 100%;
+}
+
+#c:-webkit-full-screen {
+    width: 100vw;
+    height: 100vh;
+}
+
+#c:-moz-full-screen {
+    width: 100vw;
+    height: 100vh;
+}
+
+#c:-ms-fullscreen {
+    width: 100vw;
+    height: 100vh;
+}
+
+#c:fullscreen {
+    width: 100vw;
+    height: 100vh;
+}
+
+section[role="banner"] {
+    position: relative;
+    width: 100%;
+}
+
+#wrapper-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#wrapper-video video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    min-width: 50%;
+    min-height: 50%;
+}
+
+video::-webkit-media-controls-panel {
+    width: 40px;
+}
+
+#file-selector {
+    display: none;
+    background: #00000073;
+    width: 100%;
+    position: fixed;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    display: table;
+    text-align: center;
+}
+
+.file-area {
+    position: relative;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.file-area input[type=file] {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.file-area .file-dummy {
+    border: 2px dashed #ccc;
+    background-color: #fff;
+    text-align: center;
+    transition: background 0.3s ease-in-out;
+    margin: 0 auto;
+    width: 76%;
+    height: 70%;
+    font-size: 2em;
+    padding: 8%;
+}
+
+.file-area .file-dummy .success {
+    display: none;
+}
+
+.file-area:hover .file-dummy {
+    border: 2px dashed #1abc9c;
+}
+
+.file-area input[type=file]:valid+.file-dummy {
+    border-color: #1abc9c;
+}
+
+.file-area input[type=file]:valid+.file-dummy .success {
+    display: none;
+}
+
+.file-area input[type=file]:valid+.file-dummy .default {
+    display: inline-block;
+}
+
+ul.file-tips {
+    /* list-style-type: none; */
+    border-top: 1px solid black;
+    padding: 16px;
+    width: inherit;
+    margin: 0;
+    margin: 29px auto;
+    text-align: left;
+}
+
+h2 {
+
+
+}
+ul.file-tips li {
+    font-size: .45em;
+}
+.contact {
+    position: absolute;
+    bottom: 0;
+    background: #ffffff7a;
+    width: 100%;
+    border-top: 1px solid #ddd;
+    padding: 1px;
+    z-index: 99999;
+}
+.contact p {
+    font-size: 1em;
+}

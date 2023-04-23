@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Bandersnatch Interactive</title>
+		<script src="assets/bandersnatch.js"></script>
+		<script src="assets/SegmentMap.js"></script>
+		<script src="assets/scripts.js"></script>
+		<link rel="stylesheet" type="text/css" href="assets/styles.css">
+	</head>
+
+	<body onload=onload()>
+		<div>
+			<div id="c">
+				<section role="banner">
+					<div id="file-selector">
+						<div class="file-area">
+							<div class="contact">
+								<p>
+									Developed by Mehotkhan , Contact with me : <a href="https://github.com/mehotkhan" target="_blank">github.com/mehotkhan</a>
+								</p>
+
+							</div>
+							<input id="fileinput" type="file">
+							<div class="file-dummy">
+								<h2>Bandersnatch Interactive Player</h2>
+								<span class="default">Select Bandersnatch video file ( 5:12:14 ) </span>
+								<span class="success">Great, your file is selected</span>
+								<ul class="file-tips">
+									<li>this player only work on google chrome ( on firefox dont work , codec problem,test other browser ?)</li>
+									<li>download Bandersnatch video file ( 5:12:14 )</li>
+									<li>drag it on white box on page :)</li>
+									<li>on full screen video choice dont show !!!</li>
+									<li>only english subtitle available , if you want add another language subtitle , tell me</li>
+
+								</ul>
+							</div>
+						</div>
+
+					</div>
+					<div id="wrapper-video">
+						<video id="video" controls loop controls preload="metadata">
+							<source id="video-source" src="">
+							<track label="English" kind="subtitles" srclang="en" src="Black.Mirror.Bandersnatch.2018.WEBRip.x264-NoGRP.vtt"
+							 default>
+
+						</video>
+						<div class="controls">
+							<div id="choiceCaption"></div>
+							<div id="progress"></div>
+							<div class="buttons">
+								<ul id="choices"></ul>
+								<ul id="interactionZones"></ul>
+								<ul id="nextSegments"></ul>
+								<ul id="nextSegment"></ul>
+							</div>
+						</div>
+					</div>
+
+			</div>
+			</section>
+
+
+		</div>
+	</body>
+
+</html>
